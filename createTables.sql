@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS WeatherForecasts;
 *               CREATE tables
 */-------------------------------------------
 
--- Users table contains user information
+-- WeatherForecasts table contains weather data
 CREATE TABLE WeatherForecasts (
     weatherForecastId int(11) NOT NULL AUTO_INCREMENT,
     date datetime NOT NULL,
