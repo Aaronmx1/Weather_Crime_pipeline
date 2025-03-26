@@ -12,7 +12,7 @@ import requests_cache
 import pandas as pd
 from retry_requests import retry
 import time
-from insertData import insert_db_data  # insert data into database
+from insertData import insert_weather_data  # insert data into database
 
 
 def open_meteo_api():
@@ -91,8 +91,8 @@ def open_meteo_api():
         # Append Area name to dataframe
         hourly_dataframe['AreaName'] = area
 
-        # insertion check
-        insert_db_data(hourly_dataframe)
+        # Insert data into database
+        insert_weather_data(hourly_dataframe)
         
         # pause for API call
         time.sleep(2)
