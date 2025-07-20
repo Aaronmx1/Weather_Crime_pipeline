@@ -1,5 +1,8 @@
 # Overview
-This project stores two types of data, weather and crime records, to identify if there is a correlation between weather and crime statistics.  The weather data is pulled through an API from open-meteo and crime records are CSV imports of Los Angeles crime pulled from data.gov.  The emphasis of this project is to showcase the ELT process of ingesting data from two data sources (API & CSV), loading unclean raw data into the database, then transforming any unclean data into useable clean data and adding any necessary meta-data in order to query interesting insights.
+This project stores two types of data, weather and crime records, to identify if there is a correlation between weather and crime statistics.  
+The weather data is pulled through an API from open-meteo and crime records are CSV imports of Los Angeles crime pulled from data.gov.  
+The emphasis of this project is to showcase the ELT process of ingesting data from two data sources (API & CSV), loading unclean raw data into the database, then transforming any unclean data into useable clean data and adding any necessary meta-data in order to query interesting insights.
+Due to the nature of the crime dataset I will need to normalize and create relations between the tables, but my main purpose right now is to provide insights about what this dataset contains.
 
 # Technology used
 - Python for API and CSV ingestion and data cleaning
