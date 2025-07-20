@@ -1,10 +1,11 @@
-# Weather_pipeline
-Pipeline which retrieves weather data from open-meteo and loads ingested data into MariaDB
-
 # Overview
-3/11/2025 iteration: This is the initial phase of my data pipeline setup which consists of one table storing weather data from open-meteo's API.  The cities queried were Los Angeles, Orange County, and San Diego from the dates 1/1/2024 to 1/1/2025.  There were roughly 26k records retrieved and stored which I plan to build upon in order to generate a more complex schema that allows for additional analysis.
+This project stores two types of data, weather and crime records, to identify if there is a correlation between weather and crime statistics.  The weather data is pulled through an API from open-meteo and crime records are CSV imports of Los Angeles crime pulled from data.gov.  The emphasis of this project is to showcase the ELT process of ingesting data from two data sources (API & CSV), loading unclean raw data into the database, then transforming any unclean data into useable clean data and adding any necessary meta-data in order to query interesting insights.
 
-3/26/2025 iteration: Reworked my crime API to ingest data and store raw data into bronze layer along with meta-data.  Updated my transfer from bronze to silver layer, but need to add additional cleaning methods before transfer to silver layer.  Updated the Schema to incorporate bronze and silver layers.  Updated Crimes table to reflect schema, need to rework the Weather table in next iteration.
+# Technology used
+- Python for API and CSV ingestion and data cleaning
+- SQL for creating and querying database tables
+- MariaDb for storing data
+
 
 # Schema
 <img src="blob:chrome-untrusted://media-app/78fc49ef-6235-40b7-adb0-1be4acf07db9" />![image](https://github.com/user-attachments/assets/d4b32753-df69-44c4-b9df-59581f6c1572)
